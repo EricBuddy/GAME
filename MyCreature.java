@@ -1,16 +1,18 @@
 package Game;
 
-public abstract class MyCreature implements Creature{
+public class MyCreature extends java.lang.Object implements Creature{
 	private String name;
 	private String description;
 	private int hitPoints;
 	private int damage;
+	private Room room;
 
 	public MyCreature(String name, String description, int hitPoints, int damage){
 		this.name = name;
 		this.description=description;
 		this.hitPoints=hitPoints;
 		this.damage=damage;
+		this.room=null;
 	}
 	public void setName(String name) {
 		this.name=name;
@@ -33,6 +35,12 @@ public abstract class MyCreature implements Creature{
 	public int getHitPoints() {
 		return hitPoints;
 	}
+	public void setRoom(Room room) {
+		this.room=room;
+	}
+	public Room getRoom() {
+		return room;
+	}
 	public boolean isAlive() {
 		if(hitPoints > 0) {
 			return true;
@@ -48,7 +56,7 @@ public abstract class MyCreature implements Creature{
 		}
 	}
 	public void attack(Creature creature) {
-		System.out.println(this.name + " attacks "  + creature.name + ", dealing " + damage + " damage");
+		System.out.println(this.name + " attacks "  + creature + ", dealing " + damage + " damage");
 	}
 
 	@Override
