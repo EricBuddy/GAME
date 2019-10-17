@@ -1,10 +1,10 @@
 package Game;
 
 public class MyPlayer extends MyCreature implements Player{
-	private String name;
-	private String description;
-	private int hitPoints;
-	private int damage;
+	//private String name;
+	//private String description;
+	//private int hitPoints;
+	//private int damage;
 	private int healAmount;
 
 	public MyPlayer(String name, String description, int hitPoints, int damage, int healAmount ){
@@ -12,9 +12,10 @@ public class MyPlayer extends MyCreature implements Player{
 		this.healAmount = healAmount;
 	}
 	public void heal() {
-		setHitPoints(getHitPoints()+ healAmount);
 		//this.hitPoints + this.healAmount= hitPoints;
-		System.out.print(this.name + " is healed by " + healAmount );
+		setHitPoints(getHitPoints()+ healAmount);
+		
+		System.out.print(getName() + " is healed by " + healAmount );
 	}
 
 }
