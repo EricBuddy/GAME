@@ -1,5 +1,6 @@
 package Game;
 
-public interface Player {
+public interface Player extends Creature{
+	public void heal();
 
 }
