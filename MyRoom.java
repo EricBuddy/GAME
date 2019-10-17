@@ -10,12 +10,14 @@ public class MyRoom extends java.lang.Object implements  Room{
 		this.monster=monster;
 	}
 	public boolean isComplete() {
-		
+		if(isAlive()== true){
+		    
+		}
 		
 		
 	}
 	public void enter(Player player) {
-		
+		System.out.println(player+ "This room is "+ this.description4+ ", and has "+ this.monster);
 	}
 	@Override
 	public String toString() {
