@@ -16,8 +16,6 @@ public  class MyMonster extends MyCreature implements Monster {
 	public void enrage() {
 		if(canEnrage() == true) {
 			setDamage(getDamage()*2);
-		} else {
-			canEnrage() == false;
-			}
+		} 
 		System.out.println(getName() + " has been enraged");
 	}
