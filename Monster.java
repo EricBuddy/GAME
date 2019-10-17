@@ -1,5 +1,7 @@
 package Game;
 
-public interface Monster {
-
+public interface Monster extends Creature {
+	public void enrage();
+	public boolean canEnrage();
+	
 }
