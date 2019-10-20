@@ -19,3 +19,4 @@ public  class MyMonster extends MyCreature implements Monster {
 		} 
 		System.out.println(getName() + " has been enraged");
 	}
+}
