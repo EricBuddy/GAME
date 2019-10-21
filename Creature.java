@@ -6,6 +6,6 @@ public interface Creature {
 	public boolean isAlive();
 	@Override
 	public String toString();
-
+public String getName();
 
 }

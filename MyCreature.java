@@ -49,9 +49,9 @@ public class MyCreature extends java.lang.Object implements Creature{
 	}
 
 	public void attack(Creature creature) {
-		System.out.println(getName() + " attacks "  + creature.name + ", dealing " + damage + " damage");
+		System.out.println(getName() + " attacks "  + creature.getName() + ", dealing " + damage + " damage");
 	}
-			
+	
 	public void takeDamage(int damage) {
 		if(hitPoints - damage >= 0) {
 			hitPoints -= damage; 
