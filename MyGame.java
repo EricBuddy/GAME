@@ -89,7 +89,7 @@ public class MyGame extends java.lang.Object implements Game{
 		PrintWriter gameLog = null;
 		
 		try {
-		 gameLog = new PrintWriter("/Users/desireeburrell333/eclipse-workspace/Game/src/Game/GameLog.txt");
+		 gameLog = new PrintWriter("/Users/antiabuddy/eclipse-workspace/Game/src/Game/GameLog.txt");
 		} catch (FileNotFoundException e ) {
 			e.printStackTrace();
 		}
