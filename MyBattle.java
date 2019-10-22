@@ -9,10 +9,10 @@ import java.util.Scanner;
 public class MyBattle extends java.lang.Object implements Battle{
 	private MyPlayer player;
 	private MyMonster monster;
-	
-	public MyBattle(MyPlayer player, MyMonster monster2, PrintWriter pw) {
+	PrintWriter pw=null;
+	public MyBattle(MyPlayer player, MyMonster monster, PrintWriter pw) {
 		this.player = player;
-		this.monster = monster2;
+		this.monster = monster;
 	}
 	@Override
 	public void run(PrintWriter pw) {
@@ -48,9 +48,12 @@ public class MyBattle extends java.lang.Object implements Battle{
 			if(!monster.isAlive()) {
 			System.out.println(monster.getName() + " is dead");
 			pw.println(monster.getName() + " is dead");
-			} else {
+			}
+			else {
 			System.out.println("Player HP: " + player.getHitPoints() + " \n Monster HP: " + monster.getHitPoints());
 			}
+			
+			
 
 		}
 		//

@@ -73,30 +73,16 @@ public class MyGame extends java.lang.Object implements Game{
 		dungeon[0] = room1;
 		dungeon[1] = room2;
 		dungeon[2] = room3;
-		
-		
-
-		
-		
-		
-		
-	}
-
-
-	
+	}	
 	public void play() {
 		
 		PrintWriter gameLog = null;
 		
 		try {
-		 gameLog = new PrintWriter("/Users/desireeburrell333/eclipse-workspace/Game/src/Game/GameLog.txt");
+		 gameLog = new PrintWriter("C:/Users/Administrator/eclipse-workspace/project/src/Game/GameLog.txt");
 		} catch (FileNotFoundException e ) {
 			e.printStackTrace();
 		}
-		
-		
-		
-		
 		for(int i = 0; i < dungeon.length; i++) {
 			if(dungeon[i] != null) {
 				dungeon[i].enter(player, gameLog);
