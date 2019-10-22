@@ -6,22 +6,31 @@ public class MyRoom extends java.lang.Object implements  Room{
 	private int roomIndex;
 	private String description;
 	private MyMonster monster;
-
 	public MyRoom(int roomIndex, String description, MyMonster monster) {
 		this.roomIndex = roomIndex;
 		this.description = description;
 		this.monster = monster;
-	}
-		
+	}	
 	public boolean isComplete() {
 		if(!monster.isAlive()) {
 			return true;
 		} else {
 			return false;
 		}
+	} 
+	public int getRoomIndex() {
+		return roomIndex;
 	}
-
-
+	public String getDescription() {
+		return description;
+	}
+	public void setRoomIndex(int roomIndex) {
+		this.roomIndex=roomIndex;
+	}
+	public void setDescription(String description) {
+		this.description=description;
+		
+	}
 	public void enter(MyPlayer player, PrintWriter pw) {
 		System.out.println(player.getName() + " enters room " + roomIndex);
 		System.out.println("This Room is " + description + ", and has monster " + monster);
